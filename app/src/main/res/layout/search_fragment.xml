@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.bcs.trendRepo.util.Status" />
+
+        <import type="com.bcs.trendRepo.util.Resource" />
+
+        <variable
+            name="resource"
+            type="com.bcs.trendRepo.util.Resource" />
+
+        <variable
+            name="listCallback"
+            type="com.bcs.trendRepo.util.ListCallback" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:focusable="true"
+            android:iconifiedByDefault="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchInput"
+            tools:listitem="@layout/trend_repo_list" />
+
+    </RelativeLayout>
+
+</layout>

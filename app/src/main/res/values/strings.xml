@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Trending Repo List</string>
+
+    <string name="trend_repo">Trending Repositories</string>
+    <string name="try_again">Try Again</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="no_data">No Data Found</string>
+    <string name="no_network">No Network Connection</string>
+
+</resources>

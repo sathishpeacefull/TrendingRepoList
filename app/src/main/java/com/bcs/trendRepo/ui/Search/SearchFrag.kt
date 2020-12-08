@@ -14,6 +14,7 @@ import com.bcs.trendRepo.ui.TrendingRepoList.RepoListAdapter
 import com.bcs.trendRepo.ui.TrendingRepoList.TrendingRepoListFragment.Companion.trendingRepoList
 import com.bcs.trendRepo.util.autoCleared
 
+
 class SearchFrag : Fragment(), SearchView.OnQueryTextListener {
 
     var binding by autoCleared<SearchFragmentBinding>()
@@ -32,13 +33,13 @@ class SearchFrag : Fragment(), SearchView.OnQueryTextListener {
             false
         )
 
+        binding.searchInput.setOnQueryTextListener(this)
+
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-        binding.searchInput.setOnQueryTextListener(this)
 
         // Destroy this fragment and get back to previous fragment
         binding.back.setOnClickListener {
@@ -50,6 +51,7 @@ class SearchFrag : Fragment(), SearchView.OnQueryTextListener {
         adapter = RepoListAdapter(trendingRepoList)
         binding.recyclerView.adapter = adapter
     }
+
 
     override fun onQueryTextSubmit(query: String): Boolean {
         return false

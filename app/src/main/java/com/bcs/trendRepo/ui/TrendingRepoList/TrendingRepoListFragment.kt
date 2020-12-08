@@ -96,10 +96,8 @@ class TrendingRepoListFragment : Fragment(), Injectable,
     }
 
     private fun initSwipeToRefresh() {
-        if (isConnectedToInternet()) {
-            binding.swipeRefresh.setOnRefreshListener {
-                trendingRepoViewModel.refresh()
-            }
+        binding.swipeRefresh.setOnRefreshListener {
+            trendingRepoViewModel.refresh()
         }
     }
 

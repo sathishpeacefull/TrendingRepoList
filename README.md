@@ -7,8 +7,8 @@ Room DataBase works well with LiveData and lifecycle to prevent memory leaks.
 
 "Pull to Refresh" to fetch latest data has been implemented using SwipeRefreshLayout.
 
-To filter a particular repository from a list will have a option called search button. Right now I did filter by author and language 
+To filter a particular repository from a list will have a option called search button. Right now I did filter by author and language.
 
-In a reposotory list there is a field like language , To differentiate language in left side will have round dot with differnt colors each color set it from response api
+In a repository list there is a attribute language , To differentiate language in left side set a round dot with different colors each color set it from api response(Hex code value).
 
-For first time alone internet is required and it will push data into database(local), for next frequent access without internet able to access content from local
+For first time alone internet is required and it will push data into database(local), for next frequent access without internet able to access content from local.
